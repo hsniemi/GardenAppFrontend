@@ -1,0 +1,27 @@
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.list a {
+    background-color: transparent;
+    color: var(--color-violet);
+    text-decoration: none;
+}
+
+.list a:hover {
+    color: var(--color-violet-dark);
+}
+
+.list a:active,
+.list a.active {
+    color: var(--color-gray-900);
+    cursor: default;
+}

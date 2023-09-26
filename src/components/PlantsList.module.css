@@ -1,0 +1,49 @@
+.plants {
+    margin: 0 5rem;
+    max-width: 100%;
+
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    /* grid: 50% 50% / auto; */
+    grid-template-columns: repeat(auto-fill, minmax(40%, 49%));
+
+    grid-gap: 1rem;
+}
+
+.item a {
+
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.item a:hover {
+    transform: scale(1.02);
+    background-color: rgb(224, 240, 254);
+}
+
+.item img {
+    width: 40%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.content {
+    padding-left: 1rem;
+    width: 15rem;
+}
+
+.itemtitle {
+    font-weight: bold;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+}
