@@ -37,6 +37,7 @@ export async function action({ request }) {
 
         const response = await axios.post(Constants.API_ADDRESS + mode, null,
             {
+
                 headers: {
                     'Authorization': basicAuth,
                     'Content-Type': 'application/json'
@@ -53,6 +54,7 @@ export async function action({ request }) {
         }
 
         const token = response.data.access_token;
+        console.log(token);
         localStorage.setItem('token', token);
         const expiration = new Date();
         expiration.setHours(expiration.getHours() + 3);
@@ -78,7 +80,8 @@ export async function action({ request }) {
         if (!response.ok) {
             throw json({ message: 'Could not create user.' }, { status: 500 });
         }
-        return redirect('/');
+
+        return redirect('/auth?mode=login');
     }
 }
 
